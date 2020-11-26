@@ -1,0 +1,65 @@
+.style-switcher {
+  position: fixed;
+  top: 10px;
+  right: -204px;
+  z-index: 1000;
+  border: 1px solid #fdf9ff;
+  padding: 0 10px;
+  background-color: #fdf9ff;
+  box-shadow: 0 0 20px #ccc;
+  min-height: 100px;
+  transform: translateX(-100%);
+  transition: all 1s ease;
+}
+.style-switcher.open {
+  transform: translateX(0%);
+}
+
+.style-switcher h5 {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 40px;
+  text-align: center;
+  border-bottom: 1px solid #f2f2fc;
+  margin-bottom: 10px;
+}
+
+.style-switcher ul {
+  list-style: none;
+}
+.style-switcher ul li {
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+.style-switcher ul li a {
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin-right: 3px;
+  border-radius: 50%;
+}
+.style-switcher .switcher-icon {
+  width: 40px;
+  height: 40px;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: 40px;
+  position: absolute;
+  left: -42px;
+  top: 0;
+  border: 1px solid #f2f2fc;
+  box-shadow: 0 0 20px #ccc;
+}
+.style-switcher div {
+  text-align: center;
+}
+.style-switcher label {
+  font-size: 10px;
+  margin-right: 10px;
+  font-weight: 700;
+}
+.style-switcher input {
+  width: 10px;
+  height: 10px;
+}

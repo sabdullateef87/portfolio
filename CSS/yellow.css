@@ -1,5 +1,3 @@
-
-
 .portfolio .portfolio-filter button.active,
 .contact .contact-info-item .icon .fa,
 .lightbox .lightbox-controls .next .fa,
@@ -8,14 +6,11 @@
 .services .service-item-inner .icon .fa,
 .aside .nav li a:not(.active):hover,
 .aside .nav li a.active {
-  color: #ec1839;
+  color: #ffb400;
 }
-
-
 
 .btn,
 .blog .blog-item .blog-item-inner .blog-img .blog-date,
-/* .portfolio .portfolio-filter button.active, */
 .services .service-item-inner:hover .icon .fa,
 .about .about-content .timeline .circle-dot,
 .about .about-content .timeline-item::before,
@@ -27,19 +22,19 @@
 .aside .nav-toggler span,
 .section-title h1::after,
 .section-title h1::before {
-  background-color: #ec1839;
+  background-color: #ffb400;
 }
 
-.aside .logo a::before{
-  border-bottom: 4px solid #ec1839;
-  border-left: 4px solid #ec1839;
+.aside .logo a::before {
+  border-bottom: 4px solid #ffb400;
+  border-left: 4px solid #ffb400;
 }
 
 .aside .logo a::after {
-  border-top: 4px solid #ec1839;
-  border-right: 4px solid #ec1839;
+  border-top: 4px solid #ffb400;
+  border-right: 4px solid #ffb400;
 }
 
 .portfolio .portfolio-filter button.active {
-  border-bottom: 2px solid #ec1839;
+  border-bottom: 2px solid #ffb400;
 }

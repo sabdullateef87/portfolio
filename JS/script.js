@@ -77,9 +77,6 @@ function nextItem() {
   } else {
     itemIndex += 1;
   }
-  // lightboxImg.style.animationName = "slideInLeft";
-  // lightboxImg.style.animationDuration = `${0.3}s`;
-  // lightboxImg.style.animationTimingFunction = "ease";
   changeItem();
 }
 
@@ -88,4 +85,45 @@ lightBox.addEventListener("click", function (event) {
   if (c === "lightbox-close" || c === "lightbox open") {
     lightBox.classList.remove("open");
   }
+});
+
+const nav = document.querySelector(".nav"),
+  navList = nav.querySelectorAll("li");
+const allSections = document.querySelectorAll(".section");
+
+for (let i = 0; i < navList.length; i++) {
+  const a = navList[i].querySelector("a");
+  a.addEventListener("click", function () {
+    for (let j = 0; j < navList.length; j++) {
+      navList[j].querySelector("a").classList.remove("active");
+    }
+
+    this.classList.add("active");
+    showSection(this);
+  });
+}
+
+function showSection(element) {
+  const target = element.getAttribute("href").split("#")[1];
+
+  for (let i = 0; i < allSections.length; i++) {
+    allSections[i].classList.remove("active");
+  }
+
+  document.querySelector(`#${target}`).classList.add("active");
+}
+
+const section = document.querySelector(".section");
+
+console.log(section);
+const navToggler = document.querySelector(".nav-toggler");
+const aside = document.querySelector(".aside");
+navToggler.addEventListener("click", function () {
+  console.log(aside.classList);
+  if (!aside.classList.contains("open")) {
+    section.addEventListener("click", function () {
+      aside.classList.remove("open");
+    });
+  }
+  aside.classList.toggle("open");
 });

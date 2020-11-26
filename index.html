@@ -7,11 +7,18 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>Abdullateef Suleimanp</title>
+    <title>Abdullateef Suleiman Adeiza</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="CSS/styles.css" type="text/css" />
-    <link rel="stylesheet" href="CSS/pink.css" type="text/css" />
+    <link rel="stylesheet"  href="CSS/styles.css" type="text/css" />
+    <link rel="stylesheet" href="CSS/styleSwitcher.css" type="text/css" />
+    <link rel="stylesheet"  href="CSS/pink.css" type="text/css" />
+     
+    <link rel="stylesheet" class="altername-style" tag="pink" href="CSS/pink.css" type="text/css" disabled/>
+    <link rel="stylesheet" class="altername-style" tag="orange" href="CSS/orange.css" type="text/css" disabled />
+    <link rel="stylesheet" class="altername-style" tag="blue" href="CSS/blue.css" type="text/css" disabled/>
+    <link rel="stylesheet" class="altername-style" tag="green"  href="CSS/green.css" type="text/css" disabled />
+    <link rel="stylesheet" class="altername-style" tag="yellow" href="CSS/yellow.css" type="text/css" disabled/>
   </head>
   <body>
     <!--[if lt IE 7]>
@@ -37,23 +44,23 @@
         <!-- Nav -->
         <ul class="nav">
           <li>
-            <a href="#" class="active"><i class="fa fa-home"></i>Home</a>
+            <a href="#home" title="home" class="active"><i class="fa fa-home"></i>Home</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-user"></i>About</a>
+            <a href="#about"title="about" ><i class="fa fa-user"></i>About</a>
           </li>
 
           <li>
-            <a href="#"><i class="fa fa-list"></i>Services</a>
+            <a href="#services" title="services" ><i class="fa fa-list"></i>Services</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-briefcase"></i>Porfolio</a>
+            <a href="#portfolio" title="portfolio "><i class="fa fa-briefcase"></i>Porfolio</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-envelope"></i>Blog</a>
+            <a href="#blog" title="blog"><i class="fa fa-envelope"></i>Blog</a>
           </li>
           <li>
-            <a href="#"><i class="fa fa-comments"></i>Contact</a>
+            <a href="#contact" title="contact"><i class="fa fa-comments"></i>Contact</a>
           </li>
         </ul>
       </div>
@@ -62,7 +69,7 @@
       <!-- Main Content -->
       <div class="main-content">
         <!-- home sections -->
-        <section class="home section">
+        <section class="home section active" id="home">
           <div class="before-intro">
             <div class="intro">
               <img
@@ -92,7 +99,7 @@
         <!-- end of home sections -->
 
         <!-- About section starts -->
-        <section class="about section">
+        <section class="about section" id="about">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -304,7 +311,7 @@
         <!-- end About sections -->
 
         <!-- services section -->
-        <section class="services section">
+        <section class="services section" id="services">
 
           <div class="container">
             <div class="row">
@@ -384,7 +391,7 @@
 
 
         <!-- portfolio section  -->
-        <section class="portfolio section">
+        <section class="portfolio section" id="portfolio">
           <div class="container">
             <div class="row">
               <div class="section-title padd-15">
@@ -504,7 +511,7 @@
         <!-- end of portfolio section  -->
 
         <!-- blog section  -->
-        <section class="blog section">
+        <section class="blog section" id="blog">
           <div class="container">
             <div class="row">
               <div class="section-title">
@@ -586,7 +593,7 @@
         <!-- end of blog section  -->
 
         <!-- contact section  -->
-        <section class="contact section">
+        <section class="contact section" id="contact">
           <div class="container"> 
             <div class="row">
               <div class="section-title">
@@ -676,6 +683,35 @@
             </div>
           </div>
 
+
+          <!-- style switcher  -->
+          <div class="style-switcher open">
+            <div class="switcher-icon">
+              <i class="fa fa-cog fa-spin"></i>
+            </div>
+            <h5>Style Switcher</h5>
+            <ul>
+              <li><a href="#" title="pink" style="background-color: #ec1839;" onclick="setActiveStyle('pink')"></a></li>
+              <li><a href="#" title="blue" style="background-color: #2196f3;" onclick="setActiveStyle('blue')"></a></li>
+              <li><a href="#" title="orange" style="background-color: #fa5b0f;" onclick="setActiveStyle('orange')"></a></li>
+              <li><a href="#" title="yellow" style="background-color: #ffb400;" onclick="setActiveStyle('yellow')"></a></li>
+              <li><a href="#" title="green" style="background-color: #72b626;" onclick="setActiveStyle('green')"></a></li>
+            </ul>
+
+            <h5>Body Skin</h5>
+            <div>
+              <label for="">
+                <input type="radio" class="body-skin" name="body-style" value="light">
+                Light
+              </label> 
+              <label for="">
+                <input type="radio" class="body-skin" name="body-style" value="dark">
+                Dark
+              </label> 
+            </div>
+            </div>
+
     <script src="JS/script.js" async defer></script>
+    <script src="JS/styleSwitcher.js"></script>
   </body>
 </html>

@@ -7,6 +7,7 @@ body {
   line-height: 1.5;
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  
 }
 * {
   margin: 0;
@@ -25,10 +26,36 @@ body {
   min-height: 100vh;
   display: block;
   padding: 0 30px;
+  position: fixed;
+  left: 270px;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  opacity: 1;
+  
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* background-color: black; */
+  /* color: white !important; */
+}
+.section.active{
+  animation: slideInLeft 0.5s ease;
+  opacity: 1;
+  z-index: 2;
+}
+@keyframes slideInLeft{
+  0%{
+    transform: translateY(100%);
+  }
+  100%{
+    transform: translateY(0%);
+  }
 }
 .section .container {
   padding-top: 60px;
   padding-bottom: 70px;
+  transition: all 0.5s ease;
 }
 .section-title {
   /* background-color: red; */
@@ -73,9 +100,9 @@ body {
   padding-left: 15px;
   padding-right: 15px;
 }
-.main-content {
+/* .main-content {
   padding-left: 270px;
-}
+} */
 .container {
   max-width: 1100px;
   /* background-color: red; */
@@ -92,6 +119,11 @@ body {
   z-index: 10;
   border-right: 1px solid #e8dfec;
   padding: 30px;
+  transition: all 1s ease;
+}
+
+.aside.open{
+  left: 0px;
 }
 .aside .logo {
   padding: 30px 0;
@@ -196,6 +228,7 @@ body {
   left: 0;
   top: 6px;
 }
+
 .aside .nav li {
   display: block;
   border-bottom: 2px solid #e8dfec;
@@ -934,6 +967,14 @@ body {
 @media (max-width: 1062px) {
   .aside {
     left: -270px;
+  }
+  .section{
+    left: 0;
+  }
+  .aside .nav-toggler{
+    display: flex;
+    left: 10px;
+    top: 5px;
   }
   .main-content {
     padding-left: 0px;
