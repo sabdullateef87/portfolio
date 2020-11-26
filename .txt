@@ -1,0 +1,40 @@
+  1) Aside Navbar
+    -logo
+
+    Nav
+    -icon (fa fa-home) font Awesome Icon Home
+    -icon (fa fa-user) font Awesome Icon About
+    -icon (fa fa-list) font Awesome Icon Services
+    -icon (fa fa-briefcase) font Awesome Icon Portfolio
+    -icon (fa fa-envelope) font Awesome Icon Blog
+    -icon (fa fa-comments) font Awesome Icon Contact
+
+    -copyright text
+
+
+1) Home Section
+
+    - Profile Photo
+    - Abdullateef Suleiman
+    -I am a Software Developer
+
+    Social Links
+
+    - icon (fa fa-twitter) font Awesome
+    - icon (fa fa-facebook)
+    - icon (fa fa-instagram)
+    - icon (fa fa-instagram)
+
+
+2) About Section
+    - About Me
+    - I'm Abdullateef Suleiman and a Software Developer
+    - Hi! My Name is Abdullateef Suleiman. I am a Software Developer who is very
+      passionate and dedicated to my work.
+
+      Persona Info
+      -Birthday : 8th February 1996
+      Website : 
+      Email : sabdullateef87@gmail.com
+      
+
