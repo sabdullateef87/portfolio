@@ -9,6 +9,9 @@ body {
   font-weight: 400;
   
 }
+.background-dark{
+  background-color: #504e70;
+}
 * {
   margin: 0;
   padding: 0;
@@ -967,14 +970,24 @@ body {
 @media (max-width: 1062px) {
   .aside {
     left: -270px;
+    
   }
+  
   .section{
     left: 0;
+    position: relative;
+    display: flex;
+    
   }
   .aside .nav-toggler{
     display: flex;
     left: 10px;
-    top: 5px;
+    top:10px;
+    transition: all 1s ease;
+    
+  }
+  .aside .nav-toggler.shift-me{
+    left: 275px;
   }
   .main-content {
     padding-left: 0px;

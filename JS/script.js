@@ -87,6 +87,8 @@ lightBox.addEventListener("click", function (event) {
   }
 });
 
+const aside = document.querySelector(".aside");
+const navToggler = document.querySelector(".nav-toggler");
 const nav = document.querySelector(".nav"),
   navList = nav.querySelectorAll("li");
 const allSections = document.querySelectorAll(".section");
@@ -99,31 +101,34 @@ for (let i = 0; i < navList.length; i++) {
     }
 
     this.classList.add("active");
+    aside.classList.remove("open");
+    navToggler.classList.remove("shift-me");
+
     showSection(this);
   });
 }
 
 function showSection(element) {
   const target = element.getAttribute("href").split("#")[1];
-
   for (let i = 0; i < allSections.length; i++) {
     allSections[i].classList.remove("active");
   }
 
+  if (document.querySelector(`#${target}`).classList.contains("active")) {
+    aside.classList.remove("open");
+    navToggler.classList.remove("shift-me");
+  } else {
+    document.querySelector(`#${target}`).addEventListener("click", function () {
+      aside.classList.remove("open");
+      navToggler.classList.remove("shift-me");
+    });
+  }
   document.querySelector(`#${target}`).classList.add("active");
 }
 
-const section = document.querySelector(".section");
+const section = document.querySelector(".section .active");
 
-console.log(section);
-const navToggler = document.querySelector(".nav-toggler");
-const aside = document.querySelector(".aside");
 navToggler.addEventListener("click", function () {
-  console.log(aside.classList);
-  if (!aside.classList.contains("open")) {
-    section.addEventListener("click", function () {
-      aside.classList.remove("open");
-    });
-  }
   aside.classList.toggle("open");
+  navToggler.classList.toggle("shift-me");
 });
